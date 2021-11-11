@@ -10,8 +10,8 @@ class HookController<T> {
   /// register a `hook` into the controller
   void registerHook(Hook<T> hook) => _hooks.add(hook);
 
-  /// remove a `hook` from the controller and return it back
-  Hook<T> unregisterHook(Hook<T> hook) => _hooks.remove(hook);
+  /// remove a `hook` from the controller and return it back if exists
+  Hook<T>? unregisterHook(Hook<T> hook) => _hooks.remove(hook);
 
   /// clear all hooks from controller
   void clear() => _hooks.clear();
