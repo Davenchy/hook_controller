@@ -1,3 +1,7 @@
+## 1.1.1
+
+- update unregisterHook method to return nullable Hook
+
 ## 1.1.0
 
 - rename next method name to commit
