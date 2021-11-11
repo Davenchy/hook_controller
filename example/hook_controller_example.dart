@@ -4,10 +4,14 @@ void main() async {
   final beforeSendHook = HookController<String>();
 
   // salt password
-  beforeSendHook.registerHook((password, next) => next('salt $password salt'));
+  beforeSendHook.registerHook(
+    (password, commit) => commit('salt $password salt'),
+  );
 
   // hash password
-  beforeSendHook.registerHook((password, next) => next('hash $password hash'));
+  beforeSendHook.registerHook(
+    (password, commit) => commit('hash $password hash'),
+  );
 
   final String password = 'my_password';
 
